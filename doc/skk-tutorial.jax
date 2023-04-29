@@ -1,0 +1,7 @@
+*skk-tutorial.vim.txt*	SKKチュートリアル
+
+==============================================================================
+COMMAND                                                   *skk-tutorial-command*
+
+SKKTutorialStart                                    *skk-tutorial-command-start*
+	チュートリアルを始める
