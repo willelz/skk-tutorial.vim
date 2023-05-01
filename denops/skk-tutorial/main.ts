@@ -55,6 +55,7 @@ export async function main(denops: Denops): Promise<void> {
   };
 
   const updateProblemField = async () => {
+    await denops.call("setbufvar", tutorialProblemBufName, "&modifiable", 1);
     //全行削除の警告抑制
     await denops.call(
       "appendbufline",
@@ -69,6 +70,7 @@ export async function main(denops: Denops): Promise<void> {
       1,
       problems[tutorialNow].split(/\r\n|\n/),
     );
+    await denops.call("setbufvar", tutorialProblemBufName, "&modifiable", 0);
   };
   denops.dispatcher = {
     async start(): Promise<void> {
